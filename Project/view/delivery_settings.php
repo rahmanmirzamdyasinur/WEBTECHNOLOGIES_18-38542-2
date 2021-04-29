@@ -1,0 +1,86 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/reg.css">
+    <title>Login</title>
+</head>
+<body>
+    <table border="0" width="100%">
+        <tr>
+            <td align="center" width="550px"><h2><img src="../assets/logo.png" width="40px" height="60px" alt="">AtoZ.com</h2></td>
+            <td width="400px"> </td>
+            <td align="center"><a href="../home.html">Home</a> | <a href="../view/delivery_login.html">Login</a> | <a href="../view/delivery_reg.html">Registration</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td height="550px" align="center">
+                <form method="POST"  action="../controller/delivery_passChange.php" onsubmit="validate()">
+                  
+                    <fieldset>
+                        <legend><b><h3>Forgot Pass</h3></b></legend>
+                        <table>
+                            <tr>
+                                <td>ID No</td>
+                                <td>: <input type="text" name="id" id="id"><br><span id="ms1"></span></td>
+                            </tr>
+                            <tr>
+                                <td>New Password:</td>
+                                <td>: <input type="password" name="newP" id="pass"><br><span id="ms2"></span></td>
+                                
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td colspan="2">
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center" >
+                                    <input type="submit" name="submit" value="Change Password" style="border-color: rgb(228, 9, 9); padding: 5px 110px; ">
+                                </td>
+                            </tr>
+                      
+                            <tr>
+                               <td colspan="2" align="right">
+                               
+                               </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center"></td>
+        </tr>
+    </table>
+    <script>
+        function validate(){
+            let id=document.getElementById('id').value;
+            let password=document.getElementById('pass').value;
+
+            if(id==""){
+                document.getElementById('ms1').innerHTML="**id cannot be empty";
+            }
+            
+            if( !password.includes("1") && !password.includes("2") && !password.includes("3") 
+                && !password.includes("4") && !password.includes("5") && !password.includes("6")
+                && !password.includes("7") && !password.includes("8") && !password.includes("9")) {
+                document.getElementById('ms2').innerHTML="**password must contain atleast one number";
+            }
+            if(pass==""){
+                document.getElementById('ms2').innerHTML="**pass cannot be empty";
+            }
+        }
+    </script>
+</body>
+</html>

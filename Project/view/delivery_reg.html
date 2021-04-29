@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../controller/reg_validation.js"></script>
+    <link rel="stylesheet" href="../style/reg.css">
+    <title>Registration</title>
+</head>
+<body>
+    <table border="0" width="100%">
+        <tr>
+            <td align="center" width="550px"><h2><img src="../assets/logo.png" width="40px" height="60px" alt="">AtoZ.com</h2></td>
+            <td width="400px"> </td>
+            <td align="center"><a href="../home.html">Home</a> | <a href="../view/delivery_login.html">Login | <a href="../view/delivery_reg.html">Registration</a></a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td  height="600px" align="center">
+                <form method="POST" action="../controller/delivery_reg.php"  enctype="multipart/form-data">
+                    <fieldset style="background-color: lemonchiffon;">
+                        <legend><b>REGISTRATION</b></legend>
+                        <table border="0">
+                            <tr>
+                                <td>Name</td>
+                                <td>:
+                                    <input type="text" name="name" id="name"><br>
+                                    <span id="msg1"> </span>
+                                </td>
+                            </tr>
+                            <tr>    
+                               <td colspan="2"><hr></td>
+                            </tr>
+                            <tr>
+                                <td>ID</td>
+                                <td>: 
+                                    <input type="text" name="id" id="id"><br>
+                                    <span id="msg2"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><hr></td>
+                            </tr>
+                            <tr>
+                                <td>Designation</td>
+                                <td>:
+                                    <input type="text" name="desig" id="desig"><br>
+                                    <span id="msg3"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><hr></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>:
+                                    <input type="email" name="email" id="email"> <button title="sample@example.com"><b> i</b></button>
+                                     <br><span id="msg4"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><hr></td>
+                            </tr>
+                            <tr>
+                                <td>Blood Group</td>
+                                <td>:
+                                    <select name="bloodGroup" id="bloodGroup">
+                                        <option value="A+">A+</option>
+                                        <option value="B+">B+</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="O+">O+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="AB-">AB-</option>
+                                    </select>
+                                    <br><span id="msg5"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><hr></td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>:
+                                    <input type="tel" name="phone" id="phone"> 
+                                    <br><span id="msg14"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><hr></td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td>:
+                                    <input type="text" name="address" id="address">
+                                    <br><span id="msg6"> </span> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><hr></td>
+                            </tr>
+                            <tr>
+                                <td>Password</td>
+                                <td>:
+                                    <input type="password" name="pass" id="">
+                                      <br><span id="msg8"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><hr></td>
+                            </tr>
+                            <tr>
+                                <td>Confirm Password</td>
+                                <td>:
+                                    <input type="password" name="cPass" id="">
+                                    <br><span id="msg9"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><hr></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <fieldset>
+                                        <legend>Gender</legend>
+                                        <input type="radio" name="gender" value="Male" id="">Male
+                                        <input type="radio" name="gender" value="Female" id="">Female
+                                        <input type="radio" name="gender" value="Other" id="">Other
+                                    </fieldset>
+                                    <span id="msg10"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><hr></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <fieldset>
+                                        <legend>Date Of Birth</legend>
+                                        <input type="date" name="dob" id="dob">
+                                    </fieldset>
+                                    <span id="msg11"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><hr></td>
+                            </tr>
+                            
+                            <tr>
+                                <td colspan="2">
+                                    <fieldset>
+                                        <legend>Picture Upload</legend>
+                                     <input type="file" name="profilepic" id="">
+                                    </fieldset>
+                                    <span id="msg12"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><hr></td>
+                            </tr>
+                            <tr>
+                                <td>Qualification</td>
+                                <td>
+                                    <textarea name="qualification" id="" ></textarea>
+                                      <br><span id="msg13"> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><hr></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="submit" value="Submit" name="submit" onclick="validate()">
+                                    <input type="reset" value="reset">
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">Copyright &COPY 2021</td>
+        </tr>
+    </table>
+     <script>
+        function validate(){
+            let id=document.getElementById('id').value;
+            let password=document.getElementById('pass').value;
+
+            if(id==""){
+                document.getElementById('ms1').innerHTML="**id cannot be empty";
+            }
+            
+            if( !password.includes("1") && !password.includes("2") && !password.includes("3") 
+                && !password.includes("4") && !password.includes("5") && !password.includes("6")
+                && !password.includes("7") && !password.includes("8") && !password.includes("9")) {
+                document.getElementById('ms2').innerHTML="**password must contain atleast one number";
+            }
+            if(pass==""){
+                document.getElementById('ms2').innerHTML="**pass cannot be empty";
+            }
+        }
+    </script>
+</body>
+</html>
