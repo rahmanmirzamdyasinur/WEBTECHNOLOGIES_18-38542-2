@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+
+        <style>
+            .error {
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header style="padding:20px">
+            <img src="../assets/logo.PNG" alt="logo" style="width:110px;height:55px;">
+            <article style="text-align: right;">
+            <a href="../home.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="registration.html">Registation</a>
+            </article>
+        </header>
+
+        <section style="text-align: center; padding:50px;">
+            <h2>Admin log in page</h2>
+            <form method="POST"  action="../controller/login.php">
+                Email: <input type="text" name="email" id="email" value="Enter your email"><br><br>
+                Password: <input type="password" name="password" id="password"><br><br>
+                <input type="submit" name="submit" value="Log In">
+            </form>
+        </section>
+
+        <footer style="text-align: center; padding:30px;">
+            <p>Copyright 2021</p>
+        </footer>
+    </body>
+</html>
