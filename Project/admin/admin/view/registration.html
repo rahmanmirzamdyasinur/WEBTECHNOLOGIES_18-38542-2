@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="padding:10px">
+        <img src="../assets/logo.PNG" alt="logo" style="width:110px;height:55px;">
+        <article style="text-align: right;">
+        <a href="../home.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="registration.html">Registration</a>
+        </article>
+    </header>
+    
+    <section style="text-align: center;">
+        <h2>Registation</h2>
+        <form method="POST" action="../controller/registration.php" enctype="multipart/form-data">
+            Name: <input type="text" name="name" id="name" value="Enter your Name"><br><br>
+            E-mail: <input type="text" name="email" id="email" value="your email"><br><br>
+            User Name: <input type="text" name="userName" id="userName" value="Enter your User Name"><br><br>
+            Password: <input type="password" name="password" id="password" ><br><br>
+            Confirm Password: <input type="Password" name="confirmPassword" id="confirmPassword"><br><br>
+            Gender:
+            <input type="radio" name="gender"  value="male">Male
+            <input type="radio" name="gender" value="female">Female
+            <input type="radio" name="gender"  value="other">Other<br><br>
+            Date of birth:
+            <input type="date" name="dob" id="dob">
+            (dd/mm/yyyy)<br><br>
+            <input type="submit" value="Registation" name="submit"><br>
+        </form>
+    </section>
+    
+    <footer style="text-align: center; padding:30px;">
+        <p>Copyright 2021</p>
+    </footer>
+</body>
+</html>
